@@ -1,16 +1,15 @@
-//
-//  ScrumsView.swift
-//  Scrumdinger
-//
-//  Created by Travis Gibbs on 9/13/23.
-//
+/*
+ See LICENSE folder for this sample’s licensing information.
+ */
 
 import SwiftUI
 
 
 struct ScrumsView: View {
     @Binding var scrums: [DailyScrum]
-  
+    @State private var isPresentingNewScrumView = false
+
+
     var body: some View {
         NavigationStack {
             List($scrums) { $scrum in
@@ -21,11 +20,16 @@ struct ScrumsView: View {
             }
             .navigationTitle("Daily Scrums")
             .toolbar {
-                Button(action: {}) {
+                Button(action: {
+                    isPresentingNewScrumView = true
+                }) {
                     Image(systemName: "plus")
                 }
                 .accessibilityLabel("New Scrum")
             }
+        }
+        .sheet(isPresented: $isPresentingNewScrumView) {
+            NewScrumSheet(scrums: $scrums, isPresentingNewScrumView: $isPresentingNewScrumView)
         }
     }
 }
