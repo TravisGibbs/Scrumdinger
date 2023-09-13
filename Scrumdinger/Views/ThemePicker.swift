@@ -1,12 +1,8 @@
-//
-//  ThemePicker.swift
-//  Scrumdinger
-//
-//  Created by Travis Gibbs on 9/13/23.
-//
+/*
+ See LICENSE folder for this sample’s licensing information.
+ */
 
 import SwiftUI
-
 
 struct ThemePicker: View {
     @Binding var selection: Theme
@@ -21,7 +17,6 @@ struct ThemePicker: View {
         .pickerStyle(.navigationLink)
     }
 }
-
 
 struct ThemePicker_Previews: PreviewProvider {
     static var previews: some View {

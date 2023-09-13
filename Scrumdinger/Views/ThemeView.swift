@@ -1,12 +1,8 @@
-//
-//  ThemeView.swift
-//  Scrumdinger
-//
-//  Created by Travis Gibbs on 9/13/23.
-//
+/*
+ See LICENSE folder for this sample’s licensing information.
+ */
 
 import SwiftUI
-
 
 struct ThemeView: View {
     let theme: Theme
@@ -20,7 +16,6 @@ struct ThemeView: View {
             .clipShape(RoundedRectangle(cornerRadius: 4))
     }
 }
-
 
 struct ThemeView_Previews: PreviewProvider {
     static var previews: some View {
