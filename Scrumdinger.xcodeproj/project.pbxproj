@@ -62,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				47E272672AB2109F0024BDA9 /* Views */,
+
 				47E272572AB1FF350024BDA9 /* Models */,
 				47E05D6B2AB1F98A002475CB /* ScrumdingerApp.swift */,
 				47E05D6F2AB1F98B002475CB /* Assets.xcassets */,
